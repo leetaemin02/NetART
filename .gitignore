@@ -1,0 +1,14 @@
+node_modules/
+.next/
+dist/
+out/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+Thumbs.db
+.codex/
+.agents/
+firebase-admin*.json
+*serviceAccount*.json
