@@ -1,9 +1,22 @@
-# NÉT ART — Trang chủ thử nghiệm
+# NÉT ART — Website giới thiệu và đặt tranh qua Zalo
 
-Thiết kế dựa trên design system “Atelier Curatorial Aesthetic” trong Stitch project 787674073304119694, screen f10017b05e4145429fbcae4525fd84c1. Nền #FAF7F2, nâu đất #B85A3A, graphite #2C2825, bronze #C5A059, Newsreader/Manrope, góc vuông và khoảng trắng rộng.
+Chạy `npm run dev`, mở http://127.0.0.1:3000. Không cần cài package. Có thể mở `index.html` trực tiếp; sao chép clipboard có phương án chọn văn bản thủ công khi trình duyệt không cho phép.
 
-Đây là bản HTML/CSS/JS để duyệt thiết kế trước khi chốt công nghệ. Chưa triển khai React, backend, Firebase, MongoDB hay thanh toán. SVG, tên tác phẩm, giá và nội dung thương hiệu là minh họa. Font Google cần mạng, có font dự phòng.
+## Chức năng hiện có
 
-Chạy `npm run dev`, mở http://127.0.0.1:3000. Không cần cài package. Có thể mở index.html trực tiếp. Chức năng: lọc chất liệu, tìm tên không dấu, yêu thích lưu trong trình duyệt, xem chi tiết, menu mobile và gợi ý chọn tranh tại máy.
+- Trang chủ: giữ bảng màu kem, nâu đất và Newsreader/Manrope từ design system Stitch.
+- `catalog.html`: tìm kiếm không dấu, lọc phối hợp chủ đề/chất liệu/khoảng giá/yêu thích, sắp xếp tên hoặc giá, xóa bộ lọc. Điều kiện được lưu trên URL để chia sẻ.
+- `artwork.html?id=mien-yen`: trang riêng cho từng tranh, ảnh phóng to, mô tả, mã, chất liệu, kích thước và tác phẩm liên quan. Có trạng thái không tìm thấy với ID sai.
+- `artist.html`: giới thiệu Nguyễn Thị Hồng Ngọc, sinh viên Đại học Kiến trúc TP.HCM, ngành Mỹ thuật đô thị và Kiến trúc theo thông tin chủ website cung cấp; phần tác phẩm tiêu biểu đang dùng minh họa.
+- Đặt hàng: sao chép lời nhắn chứa tên/mã tranh, mở https://zalo.me/0339667601, khách tự điền và gửi thông tin liên hệ. Trao đổi đặt cọc, giao nhận qua Zalo. Website không tự gửi tin nhắn hoặc xác nhận đơn.
+- Yêu thích lưu trên trình duyệt; không có đăng ký, đăng nhập hoặc thanh toán trực tuyến.
 
-Link tải HTML Stitch đã chuyển hướng sang đăng nhập Google; bản này dựng lại từ design system lấy qua MCP, không phải bản xuất HTML hoặc bản sao chính xác từng pixel. Không thay đổi project Stitch gốc.
+## Dữ liệu và giới hạn
+
+Tranh SVG, giá, tên, kích thước và chất liệu đều là minh họa trong `data.js`, chưa phải tác phẩm của Nguyễn Thị Hồng Ngọc. Chưa có ảnh chân dung thật; vị trí chân dung được ghi rõ là chờ cập nhật. Chưa kết nối MongoDB hay dịch vụ lưu ảnh. Không lưu thông tin liên hệ khách hàng trên website.
+
+Thiết kế lấy quy chuẩn qua Stitch MCP từ project 787674073304119694; không sửa project Stitch gốc. Google Fonts cần mạng và có font dự phòng.
+
+## Kiểm tra
+
+`npm run check`: kiểm tra cú pháp. `node scripts/check-flows.cjs`: mô phỏng DOM để kiểm tra logic danh mục, tìm kiếm, lọc kết hợp, sắp xếp, trạng thái rỗng, trang tác giả, chi tiết hợp lệ/không hợp lệ, mở hộp đặt tranh và liên kết tệp. Đây không thay thế kiểm tra trực quan trên browser. Browser trong môi trường làm việc hiện timeout khi truy cập localhost.

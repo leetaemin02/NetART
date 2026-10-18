@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Danh mục tranh — NÉT ART</title>
+    <meta name="description" content="Danh mục tranh. Liên hệ trao đổi về tranh qua Zalo 0339667601.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pages.css">
+    <link rel="stylesheet" href="gallery-redesign.css">
+    <link rel="stylesheet" href="gallery-interactions.css">
+    <script defer src="data.js"></script>
+    <script defer src="app.js"></script>
+    <script defer src="gallery-interactions.js"></script>
+</head>
+
+<body data-page="catalog"><a class="skip" href="#main">Đến nội dung</a>
+    <div id="site-header"></div>
+    <main id="main" class="wrap">
+        <section class="page-intro">
+            <p class="eyebrow">DANH MỤC TRANH</p>
+            <h1>Tìm một tác phẩm<br>đồng điệu với bạn.</h1>
+            <p>Khám phá theo chủ đề, chất liệu và khoảng ngân sách của bạn.</p>
+            <p class="sample-note">Tranh và giá hiện là dữ liệu minh họa.</p>
+        </section>
+        <form id="catalog-filters" class="catalog-filters" role="search"><label class="catalog-search">Tìm tác
+                phẩm<input id="search" type="search" placeholder="Tên tranh, chất liệu, chủ đề…"></label><label>Chủ
+                đề<select id="category">
+                    <option value="all">Tất cả chủ đề</option>
+                    <option value="landscape">Phong cảnh</option>
+                    <option value="abstract">Trừu tượng</option>
+                    <option value="still-life">Tĩnh vật</option>
+                </select></label><label>Chất liệu<select id="medium">
+                    <option value="all">Tất cả chất liệu</option>
+                    <option value="oil">Sơn dầu</option>
+                    <option value="acrylic">Acrylic</option>
+                    <option value="watercolor">Màu nước</option>
+                </select></label><label>Khoảng giá<select id="price">
+                    <option value="all">Tất cả mức giá</option>
+                    <option value="under5">Dưới 5 triệu</option>
+                    <option value="5to10">5–10 triệu</option>
+                    <option value="over10">Trên 10 triệu</option>
+                </select></label><label>Sắp xếp<select id="sort">
+                    <option value="default">Tuyển chọn</option>
+                    <option value="asc">Giá tăng dần</option>
+                    <option value="desc">Giá giảm dần</option>
+                    <option value="name">Tên A–Z</option>
+                </select></label><label class="favorite-filter"><input type="checkbox" id="saved-only"> Chỉ xem tranh
+                yêu thích</label><button type="button" class="reset-button" id="reset-filters">Xóa bộ lọc</button>
+        </form>
+        <div class="results-bar"><span id="result-count" role="status" aria-live="polite"></span><span>Đặt tranh qua
+                Zalo · Không cần tài khoản</span></div>
+        <section aria-label="Các tác phẩm">
+            <div class="art-grid" id="art-grid"></div>
+            <div id="empty" hidden class="empty-state">
+                <h2>Chưa tìm thấy tác phẩm.</h2>
+                <p>Thử thay đổi từ khóa, khoảng giá hoặc chọn “Xóa bộ lọc”.</p>
+            </div>
+        </section>
+        <section class="catalog-contact">
+            <h2>Cần thêm một gợi ý?</h2><a class="button" href="https://zalo.me/0339667601" target="_blank"
+                rel="noopener noreferrer">Trao đổi qua Zalo ↗</a>
+        </section>
+    </main>
+    <div id="site-footer"></div>
+</body>
+
+</html>

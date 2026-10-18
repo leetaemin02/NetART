@@ -1,0 +1,247 @@
+.quick-view-trigger {
+    display: block;
+    margin: 9px 0 0;
+    padding: 7px 0;
+    border: 0;
+    border-bottom: 1px solid #a4a19b;
+    background: none;
+    color: var(--ink);
+    font-size: 11px;
+    letter-spacing: .05em
+}
+
+.quick-view-trigger:hover {
+    color: var(--rust)
+}
+
+.quick-view-dialog {
+    max-width: 900px;
+    padding: 38px
+}
+
+.quick-view-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+    align-items: center
+}
+
+.quick-view-art {
+    background: #e9e8e2;
+    padding: 28px
+}
+
+.quick-view-art img {
+    display: block;
+    width: 100%;
+    height: 380px;
+    object-fit: contain
+}
+
+.quick-view-details h2 {
+    font-size: clamp(36px, 4vw, 54px)
+}
+
+.quick-view-details>p {
+    color: var(--muted)
+}
+
+.quick-view-details dl>div {
+    grid-template-columns: 100px 1fr
+}
+
+.live-search-anchor {
+    position: relative
+}
+
+.live-search-results {
+    position: absolute;
+    z-index: 30;
+    top: 100%;
+    left: 0;
+    width: max(100%, 310px);
+    max-width: min(90vw, 480px);
+    max-height: 360px;
+    overflow: auto;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    box-shadow: 0 16px 40px #0002
+}
+
+.live-search-results[hidden] {
+    display: none
+}
+
+.live-search-results a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--line);
+    font-size: 12px
+}
+
+.live-search-results a:hover,
+.live-search-results a:focus {
+    background: #eae8e1
+}
+
+.live-search-results a img {
+    width: 50px;
+    height: 56px;
+    object-fit: contain;
+    background: #e7e5df
+}
+
+.live-search-results a span {
+    flex: 1
+}
+
+.live-search-results small {
+    display: block;
+    color: var(--muted);
+    font-size: 10px
+}
+
+.live-search-results p {
+    padding: 12px;
+    font-size: 12px
+}
+
+.recently-viewed {
+    padding-top: 65px;
+    padding-bottom: 90px;
+    border-top: 1px solid var(--line)
+}
+
+.recent-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px
+}
+
+.recent-grid a {
+    display: block;
+    min-width: 0
+}
+
+.recent-grid img {
+    display: block;
+    width: 100%;
+    height: 210px;
+    object-fit: contain;
+    background: #eae9e5;
+    padding: 15px
+}
+
+.recent-grid strong {
+    display: block;
+    font: 23px Newsreader, Georgia, serif;
+    margin-top: 12px
+}
+
+.recent-grid small {
+    color: var(--muted)
+}
+
+.recent-clear {
+    border: 0;
+    border-bottom: 1px solid var(--ink);
+    background: none;
+    font-size: 11px
+}
+
+.image-loading {
+    position: relative;
+    overflow: hidden
+}
+
+.image-loading::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(105deg, #e6e5e0 12%, #f5f4f1 30%, #e6e5e0 48%);
+    background-size: 220% 100%;
+    animation: gallery-shimmer 1.4s linear infinite;
+    pointer-events: none
+}
+
+.image-loading img {
+    opacity: 0
+}
+
+@keyframes gallery-shimmer {
+    to {
+        background-position-x: -220%
+    }
+}
+
+@media(max-width:700px) {
+    .quick-view-dialog {
+        padding: 30px 18px
+    }
+
+    .quick-view-layout {
+        grid-template-columns: 1fr;
+        gap: 20px
+    }
+
+    .quick-view-art {
+        padding: 15px
+    }
+
+    .quick-view-art img {
+        height: 260px
+    }
+
+    .live-search-results {
+        width: min(86vw, 420px)
+    }
+
+    .recent-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px
+    }
+
+    .recent-grid img {
+        height: 160px
+    }
+
+    .recently-viewed {
+        padding: 45px 20px
+    }
+
+    .recent-grid strong {
+        font-size: 19px
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    .image-loading::after {
+        animation: none
+    }
+}
+
+/* Comfortable phone browsing across home, catalog, artwork and artist pages. */
+@media(max-width:700px) {
+    body { overflow-x: clip; }
+    .wrap { min-width: 0; }
+    .header nav a, .header button, .button, .secondary-button,
+    .order-actions button, .order-actions a { min-height: 44px; }
+    .header button { padding: 9px; }
+    .catalog-filters input, .catalog-filters select,
+    #order-message { font-size: 16px; min-width: 0; }
+    .catalog-filters > * { min-width: 0; }
+    .artist-facts dd, .product-info, .artist-intro > div { min-width: 0; overflow-wrap: anywhere; }
+    .artist-socials a { display: inline-flex; align-items: center; min-height: 44px; }
+    .quick-view-dialog, #order-dialog, #zoom-dialog { max-width: calc(100vw - 18px); }
+    .recently-viewed { padding-inline: 12px; }
+}
+@media(max-width:390px) {
+    .catalog-filters { grid-template-columns: minmax(0,1fr); }
+    .catalog-filters .catalog-search, .catalog-filters .favorite-filter,
+    .catalog-filters .reset-button { grid-column: 1; }
+    .artist-intro h1 { font-size: clamp(39px, 11vw, 52px); }
+    .artist-slideshow, .artist-slideshow > img { height: 300px; min-height: 300px; }
+    .quick-view-art img { height: 220px; }
+}

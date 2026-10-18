@@ -1,0 +1,4 @@
+window.NET_ART={artist:'Nguyễn Thị Hồng Ngọc',zalo:'https://zalo.me/0339667601',artworks:[
+{id:'mien-yen',name:'Một miền bình yên',medium:'Sơn dầu',type:'oil',category:'landscape',categoryName:'Phong cảnh',size:'60 × 80 cm',price:6800000,image:'landscape.svg',description:'Sắc đất ấm hòa cùng những lớp đồi xa, dành cho một không gian trầm tĩnh.'},
+{id:'nhip-mau',name:'Nhịp màu tự do',medium:'Acrylic',type:'acrylic',category:'abstract',categoryName:'Trừu tượng',size:'70 × 90 cm',price:5200000,image:'abstract.svg',description:'Những hình khối hữu cơ và sắc màu đất nung tạo nên một nhịp điệu phóng khoáng.'},
+{id:'ngay-nhe',name:'Một ngày thật nhẹ',medium:'Màu nước',type:'watercolor',category:'still-life',categoryName:'Tĩnh vật',size:'40 × 60 cm',price:2900000,image:'botanical.svg',description:'Một bình hoa giản dị trên nền giấy ấm, gợi một góc nhỏ an yên trong nhà.'}]};
